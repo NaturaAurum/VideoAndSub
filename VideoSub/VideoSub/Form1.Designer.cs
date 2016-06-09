@@ -49,6 +49,7 @@
             this.btnAddMenu.TabIndex = 1;
             this.btnAddMenu.Text = "btnAddMenu";
             this.btnAddMenu.UseVisualStyleBackColor = true;
+            this.btnAddMenu.Click += new System.EventHandler(this.btnAddMenu_Click);
             // 
             // Form1
             // 

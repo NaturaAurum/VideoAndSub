@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace VideoSub
 {
@@ -36,6 +37,14 @@ namespace VideoSub
                 return true;
             }
             return base.ProcessCmdKey( ref msg, keyData );
+        }
+
+        private void btnAddMenu_Click( object sender, EventArgs e )
+        {
+            RegistryKey key;
+            key = Registry.ClassesRoot.CreateSubKey( @"Folder\shell\MOH" );
+            key = Registry.ClassesRoot.CreateSubKey( @"Folder\shell\MOH\command" );
+            key.SetValue( "", Application.ExecutablePath );
         }
     }
 }
