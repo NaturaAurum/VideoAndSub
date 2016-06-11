@@ -28,47 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnLoad = new System.Windows.Forms.Button();
             this.btnDoChange = new System.Windows.Forms.Button();
-            this.btnAddMenu = new System.Windows.Forms.Button();
+            this.PathList = new System.Windows.Forms.ListBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnPanel = new System.Windows.Forms.Panel();
+            this.btnPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(3, 7);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(71, 37);
+            this.btnLoad.TabIndex = 0;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnDoChange
             // 
-            this.btnDoChange.Location = new System.Drawing.Point(0, 0);
+            this.btnDoChange.Location = new System.Drawing.Point(103, 7);
             this.btnDoChange.Name = "btnDoChange";
-            this.btnDoChange.Size = new System.Drawing.Size(148, 261);
-            this.btnDoChange.TabIndex = 0;
+            this.btnDoChange.Size = new System.Drawing.Size(68, 37);
+            this.btnDoChange.TabIndex = 1;
             this.btnDoChange.Text = "Change";
             this.btnDoChange.UseVisualStyleBackColor = true;
+            this.btnDoChange.Click += new System.EventHandler(this.btnDoChange_Click);
             // 
-            // btnAddMenu
+            // PathList
             // 
-            this.btnAddMenu.Location = new System.Drawing.Point(209, 0);
-            this.btnAddMenu.Name = "btnAddMenu";
-            this.btnAddMenu.Size = new System.Drawing.Size(75, 261);
-            this.btnAddMenu.TabIndex = 1;
-            this.btnAddMenu.Text = "btnAddMenu";
-            this.btnAddMenu.UseVisualStyleBackColor = true;
+            this.PathList.BackColor = System.Drawing.SystemColors.Window;
+            this.PathList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PathList.FormattingEnabled = true;
+            this.PathList.ItemHeight = 12;
+            this.PathList.Location = new System.Drawing.Point(0, 0);
+            this.PathList.Name = "PathList";
+            this.PathList.Size = new System.Drawing.Size(784, 761);
+            this.PathList.TabIndex = 2;
+            this.PathList.SelectedIndexChanged += new System.EventHandler(this.PathList_SelectedIndexChanged);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(199, 7);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(73, 37);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnPanel
+            // 
+            this.btnPanel.AutoSize = true;
+            this.btnPanel.Controls.Add(this.btnLoad);
+            this.btnPanel.Controls.Add(this.btnClear);
+            this.btnPanel.Controls.Add(this.btnDoChange);
+            this.btnPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnPanel.Location = new System.Drawing.Point(0, 714);
+            this.btnPanel.Name = "btnPanel";
+            this.btnPanel.Size = new System.Drawing.Size(784, 47);
+            this.btnPanel.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.btnAddMenu);
-            this.Controls.Add(this.btnDoChange);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(784, 761);
+            this.Controls.Add(this.btnPanel);
+            this.Controls.Add(this.PathList);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "VideoSub";
+            this.btnPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnDoChange;
-        private System.Windows.Forms.Button btnAddMenu;
+        private System.Windows.Forms.ListBox PathList;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Panel btnPanel;
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace VideoSub
 {
@@ -16,7 +17,15 @@ namespace VideoSub
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault( false );
+#if ( DEBUG )
+            AllocConsole();
+#endif
             Application.Run( new Form1() );
         }
+
+
+        [DllImport( "kernel32.dll", SetLastError = true )]
+        [return: MarshalAs( UnmanagedType.Bool )]
+        static extern bool AllocConsole();
     }
 }
