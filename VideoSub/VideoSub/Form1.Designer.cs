@@ -33,6 +33,7 @@
             this.PathList = new System.Windows.Forms.ListBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnPanel = new System.Windows.Forms.Panel();
+            this.btnAFN = new System.Windows.Forms.Button();
             this.btnPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +82,7 @@
             // btnPanel
             // 
             this.btnPanel.AutoSize = true;
+            this.btnPanel.Controls.Add(this.btnAFN);
             this.btnPanel.Controls.Add(this.btnLoad);
             this.btnPanel.Controls.Add(this.btnClear);
             this.btnPanel.Controls.Add(this.btnDoChange);
@@ -89,6 +91,16 @@
             this.btnPanel.Name = "btnPanel";
             this.btnPanel.Size = new System.Drawing.Size(784, 47);
             this.btnPanel.TabIndex = 4;
+            // 
+            // btnAFN
+            // 
+            this.btnAFN.Location = new System.Drawing.Point(304, 7);
+            this.btnAFN.Name = "btnAFN";
+            this.btnAFN.Size = new System.Drawing.Size(167, 37);
+            this.btnAFN.TabIndex = 4;
+            this.btnAFN.Text = "Change All File to Same";
+            this.btnAFN.UseVisualStyleBackColor = true;
+            this.btnAFN.Click += new System.EventHandler(this.btnAFN_Click);
             // 
             // Form1
             // 
@@ -117,6 +129,7 @@
         private System.Windows.Forms.ListBox PathList;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Panel btnPanel;
+        private System.Windows.Forms.Button btnAFN;
     }
 }
 

@@ -136,5 +136,10 @@ namespace VideoSub
                 selectedPath = targetPathList[ PathList.SelectedIndex ];
             }
         }
+
+        private void btnAFN_Click( object sender, EventArgs e )
+        {
+
+        }
     }
 }
