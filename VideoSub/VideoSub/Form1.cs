@@ -75,6 +75,7 @@ namespace VideoSub
 
 
             subFiles.Sort( ( a, b ) => StringLogicalComparer.Compare( a.Name, b.Name ) );
+            videoNameList.Sort((a, b) => StringLogicalComparer.Compare(a, b));
 
             int i = 0;
 
